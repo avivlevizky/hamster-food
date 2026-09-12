@@ -63,6 +63,11 @@ Owner review is what actually enforces it.
 
 ## Writing a new recipe
 
+Outside a checkout — the Claude desktop app, a chat with no filesystem — there are no
+scripts and nothing to write to. Produce the finished file as one Markdown block,
+frontmatter included, and say the path it belongs at (`recipes/<category>/<name>.md`).
+Skip steps 1, 2 and 6. Everything else is unchanged.
+
 1. Run `python scripts/check_owner.py <target path>`. Stop if it fails.
 2. Read `templates/recipe-template.md` and copy it.
 3. Fill the frontmatter per `references/schema.md`. Do not invent fields.
