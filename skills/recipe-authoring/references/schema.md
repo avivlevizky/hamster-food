@@ -19,6 +19,7 @@ if something needs a new field, add it here first.
 | `status` | enum | yes | `untested` `tested` `favorite` — only the user promotes |
 | `tags` | list | no | lowercase kebab-case, free-form |
 | `sources` | list of maps | yes | `{name, url, credential, contributed}` |
+| `submitted_by` | string | no | Who sent it in, when the recipe arrived from a person rather than a page |
 | `updated` | date | yes | `YYYY-MM-DD` |
 
 ## status
@@ -44,6 +45,10 @@ sources:
     credential: Italian professional baking site
     contributed: Two-stage bake temperature and the steam method
 ```
+
+When the source is a person and not a page, omit `url` and put what they are in
+`credential` — `סבתא של דנה`, `שף במסעדה בחיפה`. A recipe that came in by mail still
+needs a sources entry; the sender is the source.
 
 `contributed` is what makes the list useful — without it nobody can tell which source to
 re-read when something goes wrong.

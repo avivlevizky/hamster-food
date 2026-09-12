@@ -52,6 +52,18 @@ link, treat it as the primary source and name it as such.
    moves a recipe to `tested` or `favorite`. Never promote it on their behalf.
 5. Run `python scripts/build_index.py` to regenerate `INDEX.md`.
 
+## Recipes that arrive from other people
+
+Submissions come in by mail (see `share/submit-he.md`) as a link, a photo of a notebook
+page, a voice note, or free text. Convert them the same way as anything else, with three
+additions:
+
+1. `submitted_by` gets the sender's name, and they go in `sources` — a person is a source
+   even without a URL.
+2. Missing quantities are asked about, never filled in. Reply to the sender with the
+   specific gaps; hold the recipe until they answer rather than shipping a guess.
+3. `status: untested` always. A recipe someone else cooks well is still untested *here*.
+
 ## Scaling
 
 Scale by the yield field, not by eyeballing. Salt, leavening and spice scale sub-linearly
