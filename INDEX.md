@@ -1,3 +1,8 @@
+---
+title: מתכונים
+permalink: /
+---
+
 # INDEX
 
 נוצר אוטומטית על ידי `scripts/build_index.py`. לא לערוך ידנית.

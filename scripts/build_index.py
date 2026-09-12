@@ -65,6 +65,13 @@ def main():
     rows.sort(key=lambda r: (r["type"], r["he"]))
 
     lines = [
+        # permalink makes this the GitHub Pages homepage. A separate index.md is not an
+        # option: macOS is case-insensitive, so it would collide with INDEX.md.
+        "---",
+        "title: מתכונים",
+        "permalink: /",
+        "---",
+        "",
         "# INDEX",
         "",
         "נוצר אוטומטית על ידי `scripts/build_index.py`. לא לערוך ידנית.",
