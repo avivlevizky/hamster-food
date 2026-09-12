@@ -36,7 +36,7 @@ CLAUDE.md             שורה אחת: @AGENTS.md — בלעדיה Claude Code �
 **התקנה כפלאגין ב-Claude Code:**
 
 ```
-/plugin marketplace add <user>/hamster-food
+/plugin marketplace add avivlevizky/hamster-food
 /plugin install hamster-food@hamster-food
 ```
 
