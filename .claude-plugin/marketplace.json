@@ -1,0 +1,11 @@
+{
+  "name": "hamster-food",
+  "owner": { "name": "Aviv" },
+  "plugins": [
+    {
+      "name": "hamster-food",
+      "source": "./",
+      "description": "Recipe authoring conventions: Hebrew prose, gram weights, mandatory sources, full re-render on substitution."
+    }
+  ]
+}

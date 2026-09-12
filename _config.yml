@@ -1,0 +1,11 @@
+# GitHub Pages. Settings → Pages → Source: Deploy from branch → main / (root)
+title: מתכונים
+description: ארכיון מתכונים
+theme: jekyll-theme-primer
+lang: he
+exclude:
+  - scripts/
+  - skills/
+  - templates/
+  - AGENTS.md
+  - .claude-plugin/

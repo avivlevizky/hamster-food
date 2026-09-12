@@ -1,0 +1,8 @@
+{
+  "name": "hamster-food",
+  "version": "0.1.0",
+  "description": "Hebrew technique-first recipe archive with its authoring conventions as a skill.",
+  "author": { "name": "Aviv" },
+  "license": "MIT",
+  "skills": "./skills"
+}
