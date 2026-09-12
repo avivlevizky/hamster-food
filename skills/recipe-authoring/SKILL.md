@@ -42,15 +42,35 @@ Biancolievito, HaShulchan) → long-running blogs with a track record → social
 Never lead with AI-generated or untested crowd content. When the user shares a video or a
 link, treat it as the primary source and name it as such.
 
+## Who may write what
+
+`.github/CODEOWNERS` is the whitelist. Before creating or editing anything under
+`recipes/`, `guides/`, `logs/` or `kitchens/`, run:
+
+```
+python scripts/check_owner.py <path>
+```
+
+Non-zero exit means the current user does not own that path. Do not write it. Say who
+owns it and offer the two real options: ask that owner to add a CODEOWNERS line, or put
+the recipe under `kitchens/<their-handle>/`, which is theirs alone.
+
+Each editor owns `kitchens/<handle>/` — their own recipes, same format, same index, no
+approval needed. `recipes/` is the shared archive and changes there go through its owner.
+
+This check is a guardrail, not security; GitHub branch protection with required Code
+Owner review is what actually enforces it.
+
 ## Writing a new recipe
 
-1. Read `templates/recipe-template.md` and copy it.
-2. Fill the frontmatter per `references/schema.md`. Do not invent fields.
-3. Filename: English, kebab-case, the dish's own name — `panini-di-semola.md`, not
+1. Run `python scripts/check_owner.py <target path>`. Stop if it fails.
+2. Read `templates/recipe-template.md` and copy it.
+3. Fill the frontmatter per `references/schema.md`. Do not invent fields.
+4. Filename: English, kebab-case, the dish's own name — `panini-di-semola.md`, not
    `italian-rolls.md`. Place it under `recipes/<category>/`.
-4. `status: untested` unless the user says they have actually cooked it. Only the user
+5. `status: untested` unless the user says they have actually cooked it. Only the user
    moves a recipe to `tested` or `favorite`. Never promote it on their behalf.
-5. Run `python scripts/build_index.py` to regenerate `INDEX.md`.
+6. Run `python scripts/build_index.py` to regenerate `INDEX.md`.
 
 ## Recipes that arrive from other people
 

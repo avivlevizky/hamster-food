@@ -9,7 +9,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DIRS = ["recipes", "guides"]
+DIRS = ["recipes", "guides", "kitchens"]
 STATUS_MARK = {"favorite": "★", "tested": "✓", "untested": "·"}
 
 
@@ -44,6 +44,8 @@ def main():
     rows = []
     for d in DIRS:
         for path in sorted((ROOT / d).rglob("*.md")):
+            if path.name == "README.md":
+                continue
             fm = parse_frontmatter(path.read_text(encoding="utf-8"))
             if not fm.get("title_he"):
                 print(f"skipped (no frontmatter): {path.relative_to(ROOT)}", file=sys.stderr)

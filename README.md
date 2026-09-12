@@ -15,6 +15,7 @@ opens the folder works the same way.
 recipes/<category>/   המתכונים
 guides/               טכניקה שאינה מנה (בניית מחמצת, תסיסה)
 logs/                 לוגים — אפיות, מחמצת. append-only
+kitchens/<handle>/    המטבח הפרטי של כל עורך
 skills/               הקונבנציות, כמיומנות שאפשר להתקין
 templates/            תבנית מתכון
 scripts/              build_index.py מייצר את INDEX.md
@@ -54,6 +55,22 @@ https://docs.claude.com/en/docs/claude-code/overview
 `_config.yml` מוכן ל-GitHub Pages. Settings → Pages → Deploy from branch → main / root.
 מקבלים URL אחד שנפתח בדפדפן בלי חשבון ובלי אפליקציה — זו הדרך לשתף עם מי שלא רוצה לדעת
 מה זה ריפו.
+
+## מי רשאי לערוך
+
+`.github/CODEOWNERS` היא הרשימה הלבנה היחידה — נתיב → בעלים. GitHub אוכף אותה על PR
+(Settings → Branches → Require review from Code Owners), והסוכן קורא את אותו הקובץ:
+
+```bash
+python scripts/check_owner.py recipes/bread/foo.md
+```
+
+יציאה שונה מאפס = אין הרשאה לנתיב הזה, והסוכן לא כותב. להוסיף עורך = שורה אחת
+ב-CODEOWNERS + הזמנה כ-collaborator.
+
+`recipes/` הוא הארכיון המשותף. `kitchens/<handle>/` הוא המטבח הפרטי של כל עורך — אותו
+פורמט, אותו INDEX, בעלות בלעדית. הבדיקה בצד הסוכן היא מעקה ולא אבטחה; מי שיש לו clone
+יכול להתעלם ממנה, ולכן ההגנה האמיתית היא branch protection.
 
 ## הוספת מתכון
 

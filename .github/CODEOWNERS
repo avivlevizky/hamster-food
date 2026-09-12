@@ -1,0 +1,21 @@
+# מי רשאי ליצור ולערוך, לפי נתיב. זו הרשימה הלבנה היחידה בריפו.
+#
+# GitHub אוכף את זה על PR (Settings → Branches → Require review from Code Owners),
+# והסוכן קורא את אותו הקובץ לפני שהוא כותב — scripts/check_owner.py.
+# שורה אחרונה שמתאימה היא הקובעת, כמו אצל GitHub.
+
+*                       @avivlevizky
+
+# הארכיון המשותף. מי שמופיע כאן יכול לערוך כל מתכון.
+/recipes/               @avivlevizky
+/guides/                @avivlevizky
+/logs/                  @avivlevizky
+
+# הקונבנציות עצמן — צרות יותר בכוונה.
+/skills/                @avivlevizky
+/scripts/               @avivlevizky
+/.github/               @avivlevizky
+
+# מטבח פרטי לכל עורך: kitchens/<handle>/. הוא הבעלים שם ואף אחד אחר לא נוגע.
+# להוסיף עורך = שורה אחת כאן, ולהזמין אותו כ-collaborator בריפו.
+# /kitchens/dana/       @dana

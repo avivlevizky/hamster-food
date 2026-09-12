@@ -21,12 +21,14 @@ The short version, if you read nothing else:
 - An ingredient substitution means re-rendering the whole recipe, not a patch.
 - `status: untested` until the user says they cooked it. Only the user promotes.
 - Hebrew for prose, English for keys and filenames.
+- `.github/CODEOWNERS` says who may write where. `scripts/check_owner.py <path>` before writing.
 
 ## Layout
 
 ```
 recipes/<category>/   the recipes themselves
 guides/               technique that isn't a dish (starter building, fermentation)
+kitchens/<handle>/    each editor's own recipes, owned by them alone
 logs/                 bake logs, append-only
 templates/            recipe template
 skills/               the conventions, as an installable skill
